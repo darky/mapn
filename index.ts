@@ -1,8 +1,13 @@
-export const mapn = <T, R0, R1, R2, R3, R4, R5, R6, R7, R8, R9>(
+export function mapn<T, R0>(arr: T[], fn: (el: T) => [R0]): [R0[]];
+export function mapn<T, R0, R1>(arr: T[], fn: (el: T) => [R0, R1]): [R0[], R1[]];
+export function mapn<T, R0, R1, R2>(arr: T[], fn: (el: T) => [R0, R1, R2]): [R0[], R1[], R2[]];
+export function mapn<T, R0, R1, R2, R3>(arr: T[], fn: (el: T) => [R0, R1, R2, R3]): [R0[], R1[], R2[], R3[]];
+export function mapn<T, R0, R1, R2, R3, R4>(
   arr: T[],
-  fn: (el: T) => [R0, R1, R2, R3, R4, R5, R6, R7, R8, R9]
-) => {
-  const response: Record<number, (R0 | R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8 | R9)[]> = {
+  fn: (el: T) => [R0, R1, R2, R3, R4]
+): [R0[], R1[], R2[], R3[], R4[]];
+export function mapn(arr: unknown[], fn: (el: unknown) => unknown[]) {
+  const response: Record<number, unknown[]> = {
     0: [],
     1: [],
     2: [],
@@ -22,5 +27,5 @@ export const mapn = <T, R0, R1, R2, R3, R4, R5, R6, R7, R8, R9>(
     });
   }
 
-  return Object.values(response) as [R0[], R1[], R2[], R3[], R4[], R5[], R6[], R7[], R8[], R9[]];
-};
+  return Object.values(response);
+}
