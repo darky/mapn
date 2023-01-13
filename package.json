@@ -1,0 +1,20 @@
+{
+  "name": "mapn",
+  "version": "0.0.0",
+  "description": "Like JavaScript Array.map, but with multiple returns",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "keywords": [
+    "map",
+    "multi",
+    "multiple",
+    "array"
+  ],
+  "author": "Vladislav Botvin",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "4.9.4"
+  }
+}
