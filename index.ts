@@ -16,10 +16,7 @@ export function mapn(arr: unknown[], fn: (el: unknown) => unknown[]) {
   };
 
   for (const el of arr) {
-    const fnResp = fn(el);
-    fnResp.forEach((resp, i) => {
-      response[i]!.push(resp);
-    });
+    fn(el).forEach((resp, i) => response[i]!.push(resp));
   }
 
   return Object.values(response);
