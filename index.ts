@@ -13,11 +13,6 @@ export function mapn(arr: unknown[], fn: (el: unknown) => unknown[]) {
     2: [],
     3: [],
     4: [],
-    5: [],
-    6: [],
-    7: [],
-    8: [],
-    9: [],
   };
 
   for (const el of arr) {
