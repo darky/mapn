@@ -30,15 +30,27 @@ export function mapn(arr: unknown[], fn: (el: unknown) => unknown[]) {
   for (const el of arr) {
     const fnResp = fn(el);
     const fnResp0 = fnResp[0];
-    fnResp0 === void 0 || fnResp0 === mapnSkip || resp0.push(fnResp0);
+    fnResp0 === mapnSkip || resp0.push(fnResp0);
     const fnResp1 = fnResp[1];
-    fnResp1 === void 0 || fnResp1 === mapnSkip || resp1.push(fnResp1);
+    fnResp1 === mapnSkip || resp1.push(fnResp1);
+
     const fnResp2 = fnResp[2];
-    fnResp2 === void 0 || fnResp2 === mapnSkip || resp2.push(fnResp2);
+    if (fnResp2 === void 0) {
+      continue;
+    }
+    fnResp2 === mapnSkip || resp2.push(fnResp2);
+
     const fnResp3 = fnResp[3];
-    fnResp3 === void 0 || fnResp3 === mapnSkip || resp3.push(fnResp3);
+    if (fnResp3 === void 0) {
+      continue;
+    }
+    fnResp3 === mapnSkip || resp3.push(fnResp3);
+
     const fnResp4 = fnResp[4];
-    fnResp4 === void 0 || fnResp4 === mapnSkip || resp4.push(fnResp4);
+    if (fnResp4 === void 0) {
+      continue;
+    }
+    fnResp4 === mapnSkip || resp4.push(fnResp4);
   }
 
   return [resp0, resp1, resp2, resp3, resp4];
