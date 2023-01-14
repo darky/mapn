@@ -27,8 +27,10 @@ export function mapn(arr: unknown[], fn: (el: unknown) => unknown[]) {
   const resp3: unknown[] = [];
   const resp4: unknown[] = [];
 
-  for (const el of arr) {
-    const fnResp = fn(el);
+  const l = arr.length;
+  let i = 0;
+  while (i < l) {
+    const fnResp = fn(arr[i++]);
     const fnResp0 = fnResp[0];
     fnResp0 === mapnSkip || resp0.push(fnResp0);
     const fnResp1 = fnResp[1];
