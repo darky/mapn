@@ -7,6 +7,10 @@
     "./dist/index.js",
     "./dist/index.d.ts"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/darky/mapn.git"
+  },
   "scripts": {
     "build": "rm -rf dist && npx tsc",
     "test": "npm run build && node ./dist/test.js",
@@ -16,7 +20,9 @@
     "map",
     "multi",
     "multiple",
-    "array"
+    "array",
+    "dimension",
+    "return"
   ],
   "author": "Vladislav Botvin",
   "license": "MIT",
