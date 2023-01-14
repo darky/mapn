@@ -13,3 +13,9 @@ test('skip', () => {
   assert.deepStrictEqual(numbers, [2, 6]);
   assert.deepStrictEqual(strings, ['1', '2', '3']);
 });
+
+test('null ok', () => {
+  const [numbers, strings] = mapn([1, 2, 3], n => [n === 2 ? null : n * 2, `${n}`]);
+  assert.deepStrictEqual(numbers, [2, null, 6]);
+  assert.deepStrictEqual(strings, ['1', '2', '3']);
+});
