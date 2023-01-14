@@ -1,6 +1,6 @@
 {
   "name": "mapn",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Like JavaScript Array.map, but with multiple returns",
   "main": "dist/index.js",
   "files": [
